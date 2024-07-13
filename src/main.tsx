@@ -4,11 +4,17 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 
+import { HomePage } from './pages/homePage.tsx'
+
 const routes = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
+      {
+        path: "/", 
+        element: <HomePage/>
+      },
       { 
         path: "meals", 
         element: (

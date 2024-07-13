@@ -9,7 +9,7 @@ function App() {
   return (
       <SiteTemplate>
           <Outlet />
-          <Outlet />
+          <p style={{"display": "hidden"}}></p>
       </SiteTemplate>
   )
 }
