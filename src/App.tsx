@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import './App.css'
 import { Outlet, Link } from 'react-router-dom'
 
 import { SiteTemplate } from './templates/site.tsx'
+import "./App.scss";
 
 
 function App() {

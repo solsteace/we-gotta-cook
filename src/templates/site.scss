@@ -39,15 +39,13 @@ header {
         display: flex;
     }
 
-    &__copyright {
-        text-align: center;
-    }
 }
 
-.site__main {
-    > * {
-        margin-bottom: 3*$padding-y;
-    }
+.site__copyright {
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    text-align: center;
 }
 
 .site__logo {
