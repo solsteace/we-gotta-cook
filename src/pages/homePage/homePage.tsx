@@ -41,8 +41,6 @@ export function HomePage() {
         getData();
     }, [])
 
-    console.log(mealsSamples)
-    console.log(cocktailsSamples)
     return (
         <>
             <section className="home__hero">
@@ -78,10 +76,7 @@ export function HomePage() {
                 <div className="samples__list">
                     {
                         !mealsFetched
-                            ? ( mealsSamples.length == 0
-                                ? <p> Something went wrong :/ </p>
-                                : <p> Fetching... </p>
-                            )
+                            ? <p> Fetching... </p>
                             : mealsSamples.map((item, key) => (
                                 <div className="sample">
                                     <img key={key} src={item.strMealThumb} alt={item.strMeal} />
@@ -93,10 +88,7 @@ export function HomePage() {
                     }
                     {
                         !cocktailsFetched
-                            ? ( cocktailsSamples.length == 0
-                                ? <p> Something went wrong :/ </p>
-                                : <p> Fetching... </p>
-                            )
+                            ? <p> Fetching... </p>
                             : cocktailsSamples.map((item, key) => (
                                 <div className="sample">
                                     <img key={key} src={item.strDrinkThumb} alt={item.strDrink} />
