@@ -3,6 +3,7 @@ import { api } from "../../api/api";
 import { Meal } from "../../types/Meal";
 import { Cocktail } from "../../types/Cocktail";
 import "./homePage.scss"
+import { Link } from "react-router-dom";
 
 export function HomePage() {
     const [cocktailsFetched, setCocktailsFetched] = useState(false);
@@ -78,19 +79,26 @@ export function HomePage() {
                         !mealsFetched
                             ? <p> Fetching... </p>
                             : mealsSamples.map((item, key) => (
-                                <div className="sample">
+                                <Link 
+                                    key={key}
+                                    to={`meal/${item.idMeal}`}
+                                    className="sample"
+                                >
                                     <img key={key} src={item.strMealThumb} alt={item.strMeal} />
                                     <div>
                                         <p className="sample__name">{item.strMeal}</p>
                                     </div>
-                                </div>
+                                </Link>
                             )) 
                     }
                     {
                         !cocktailsFetched
                             ? <p> Fetching... </p>
                             : cocktailsSamples.map((item, key) => (
-                                <div className="sample">
+                                <div 
+                                    key={key}
+                                    className="sample"
+                                >
                                     <img key={key} src={item.strDrinkThumb} alt={item.strDrink} />
                                     <div>
                                         <p className="sample__name">{item.strDrink}</p>

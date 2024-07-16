@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 
 import { HomePage } from './pages/homePage/homePage.tsx'
+import { Meals } from './pages/Meals/Meals.tsx'
 
 const routes = createBrowserRouter([
   {
@@ -16,11 +17,11 @@ const routes = createBrowserRouter([
       },
       { 
         path: "meals", 
-        element: (
-          <>
-            <h1> Tasty meals! </h1>
-          </>
-        )
+        element: <Meals/>,
+      },
+      {
+        path: "meal/:id",
+        element: <p> You're seeing a meal! </p>
       },
       { 
         path: "cocktails", 

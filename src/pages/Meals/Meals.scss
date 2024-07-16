@@ -1,0 +1,84 @@
+@import "../../global";
+
+.meals {
+    padding: $padding-y $padding-x;
+
+    &__areas {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    > button {
+        font-size: 1.2rem;
+        border: 0px solid black;
+        font-weight: bold;
+        padding: 5px 10px;
+        background: white;
+        display: block;
+        margin: auto;
+
+        > a {
+            color: black;
+            scroll-behavior: smooth;
+        }
+    }
+}
+
+.area {
+    padding: 5px 10px;
+    background: white;
+    border: 1px solid black;
+    transition: 0.25s;
+
+    &:hover {
+        cursor: pointer;
+        filter: brightness(0.9);
+    }
+}
+
+.area--active {
+    background: black;
+    color: white;
+    transition: 0.25s;
+}
+
+.meals__list {
+    padding: $padding-y 0px;
+    display: grid;
+    grid-template: 1fr / repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.searchResult {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid black;
+    transition: 0.25s;
+
+    &:hover {
+        transition: 0.25s;
+        transform: scale(1.025);
+        cursor: pointer;
+    }
+
+    &__image {
+        max-height: 160px;
+        flex: 4;
+        display: block;
+
+        > img {
+            object-fit: cover;
+        }
+    }
+    
+    &__info {
+        margin: auto;
+        vertical-align: middle;
+        text-align: center;
+        padding: 10px;
+    }
+
+}
