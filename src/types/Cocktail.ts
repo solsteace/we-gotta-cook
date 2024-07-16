@@ -3,5 +3,5 @@ export type Cocktail = {
     strDrink: string,
     strCategory: string,
     strArea: string,
-    strThumbnail: string
+    strDrinkThumb: string
 }

@@ -3,5 +3,5 @@ export type Meal = {
     strMeal: string,
     strCategory: string,
     strArea: string,
-    strThumbnail: string
+    strMealThumb: string
 }
